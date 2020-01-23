@@ -1,2 +1,9 @@
 .DS_Store
 .vscode
+DGX/bert-multi-gpu/bert/export
+DGX/gpt-2/checkpoint
+DGX/gpt-2/data
+DGX/gpt-2/gpt-2/models
+DGX/sagemaker-custom-model-deployment/bert-qa-model-2/test_dir
+DGX/sagemaker-tf-serving/sagemaker-custom-model-deployment/tf-serving-gpt-2/custom-model/container/test_dir
+DGX/sagemaker-tf-serving/sagemaker-custom-model-deployment/tf-serving/custom-model/container/test_dir
