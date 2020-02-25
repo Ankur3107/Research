@@ -8,3 +8,6 @@ DGX/sagemaker-custom-model-deployment/bert-qa-model-2/test_dir
 DGX/sagemaker-tf-serving/sagemaker-custom-model-deployment/tf-serving-gpt-2/custom-model/container/test_dir
 DGX/sagemaker-tf-serving/sagemaker-custom-model-deployment/tf-serving/custom-model/container/test_dir
 *.cpython-37.pyc
+*.egg-info
+*.whl
+*.tar.gz
