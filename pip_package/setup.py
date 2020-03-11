@@ -3,7 +3,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
      name='bizzzz',  
-     version='0.1',
+     version='0.2',
      scripts=['bizzzz'] ,
      author="Ankur Singh",
      author_email="ankur310794@gmail.com",
