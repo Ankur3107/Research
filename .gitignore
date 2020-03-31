@@ -12,3 +12,5 @@ DGX/sagemaker-tf-serving/sagemaker-custom-model-deployment/tf-serving/custom-mod
 *.whl
 *.tar.gz
 */.ipynb_checkpoints*
+Transformer Exploration/tokenizer_models/*
+*.txt
