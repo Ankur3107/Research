@@ -14,3 +14,5 @@ DGX/sagemaker-tf-serving/sagemaker-custom-model-deployment/tf-serving/custom-mod
 */.ipynb_checkpoints*
 Transformer Exploration/tokenizer_models/*
 *.txt
+*.tfrecords
+*meta_data
