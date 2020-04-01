@@ -53,6 +53,11 @@ flags.DEFINE_string("spm_model_file", './tokenizer_models/merges.txt',
                     "The model file for sentence piece tokenization.")
 
 flags.DEFINE_bool(
+    "not_required_next_seq_prediction", True,
+    "Whether to lower case the input text. Should be True for uncased "
+    "models and False for cased models.")
+
+flags.DEFINE_bool(
     "do_lower_case", True,
     "Whether to lower case the input text. Should be True for uncased "
     "models and False for cased models.")
