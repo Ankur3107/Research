@@ -1,0 +1,4 @@
+import model_gin
+
+BiLSTMGRUSpatialDropout1D.nb_words = 100
+BiLSTMGRUSpatialDropout1D.embedding_size = 1000
