@@ -16,3 +16,4 @@ Transformer Exploration/tokenizer_models/*
 *.txt
 *.tfrecords
 *meta_data
+*.npy
