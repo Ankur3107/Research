@@ -17,3 +17,4 @@ Transformer Exploration/tokenizer_models/*
 *.tfrecords
 *meta_data
 *.npy
+*/mlruns/*
