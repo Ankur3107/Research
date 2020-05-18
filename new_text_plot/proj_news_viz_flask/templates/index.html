@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project News Viz</title>
+    <meta charset="utf-8">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js">script></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/vega-tooltip/build/vega-tooltip.min.css">
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <style>hr, h3 {padding-bottom: 20px;}
+    canvas {background-color: #fffff;}
+    body {
+        font-family: 'Roboto Mono', monospace;
+    }
+    table, th, td {
+      border: 0px;
+    }
+
+  td:hover {background-color: #f5f5f5;
+  width: 20;
+  padding: 5px;}
+
+  </style>
+    <style>
+    div.waterfall {
+        width: 1200px;
+        height: 300px;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    </style>
+  </head>
+  <body>
+
+  <div class="container col-md-12">
+    <div class="header">
+      <h1 class="text-muted">Визуализация Новостей Рунета</h1>
+    </div>
+			<div class="col-md-3" align="left">
+              Источник<br>
+              <select name="source" id="source" disabled color="gray">
+                <option value="lenta" selected>Лента</option>
+              </select><br>
+
+              Тип графика<br>
+              <select name="plot_type" id="plot_type" onchange="change_plot_type()">
+                <option value="ridge" selected>Ridge plot</option>
+                <option value="bump">Bump chart</option>
+
+              </select><br>
+              Дополнительные данные<br>
+              <select name="add_data" id="add_data" onchange="change_plot_add()" multiple>
+                <option value="All" selected>Нет</option>
+                <option value="usd">Курс доллара</option>
+                <option value="mrot">МРОТ</option>
+                <option value="dohod">Доход</option>
+                <option value="oil">Цены на нефть</option>
+              </select><br>
+
+              Рубрики<br>
+              <select name="rubric" id="rubric" onchange="change_plot_rubric()">
+              </select><br>
+
+              Темы<br>
+              <select name="topic" id="topic" onchange="change_plot_topic()" multiple size="8"  style="max-width:80%;">
+                <option value="all" selected>All</option>
+              </select><br>
+			</div>
+
+    <div  class="col-md-9">
+
+      <div class="charts text-center">
+        <div class="row">
+          <div id="bar">
+
+          </div>
+        </div><hr>
+        <!-- Placeholder for the tooltip -->
+        <div id="vis-tooltip" class="vg-tooltip"></div>
+      </div>
+    </div>
+    </div>
+	<script src="static/draw.js"></script>
+
+  </body>
+</html>
