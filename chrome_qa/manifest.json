@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "src/background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "src/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Find answers to your questions from a webpage in natural language",
+   "icons": {
+      "128": "images/get_started128.png",
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyJ7GPZNFMGfpxPDbg3LVygaQHxM/90/jA+cmyZCQcWj5aUNDQxloDSO2Ml76W3SQqMT01p1EKoycCfxYy3AZYJCVnaxeo2hcyc/tr7E0D7+hz1cUJaXZCWEpqRApKhW87UJ6I57TM0ECJkbW3yZtSf6kC1SkVQAPb/NvxGfnklJEXpLT2KnQZux2Sv2SVVbIF2MAab7/6jMnxKQrrbgGJGieK4wV4gP4GGqTBKnRffdOkF7STxX3MEMpAmA4iMUbtwBcAJo2sGt1ZXlSSS8nNQzTwSX+crZiVIwr8iEOLkvp4CieMmSXalLBw3s2i4mlXXhSYNaAOoKvBNGqHcowFQIDAQAB",
+   "manifest_version": 2,
+   "name": "Website AMA",
+   "page_action": {
+      "default_popup": "src/popup.html",
+      "default_title": "A popup will come"
+   },
+   "permissions": [ "activeTab", "declarativeContent" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1"
+}
